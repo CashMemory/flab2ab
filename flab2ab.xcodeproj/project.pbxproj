@@ -15,6 +15,9 @@
 		48E2CD3224C4EE88004A6E5D /* flab2ab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 48E2CD3024C4EE88004A6E5D /* flab2ab.xcdatamodeld */; };
 		48E2CD3424C4EE8C004A6E5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48E2CD3324C4EE8C004A6E5D /* Assets.xcassets */; };
 		48E2CD3724C4EE8C004A6E5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E2CD3524C4EE8C004A6E5D /* LaunchScreen.storyboard */; };
+		48E2CD4124C639D2004A6E5D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E2CD4024C639D2004A6E5D /* HomeViewController.swift */; };
+		48E2CD4424C78191004A6E5D /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E2CD4324C78191004A6E5D /* DesignableView.swift */; };
+		48E2CD4824C78C2F004A6E5D /* LoginViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E2CD4724C78C2F004A6E5D /* LoginViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		48E2CD3324C4EE8C004A6E5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48E2CD3624C4EE8C004A6E5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48E2CD3824C4EE8C004A6E5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48E2CD4024C639D2004A6E5D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		48E2CD4324C78191004A6E5D /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		48E2CD4724C78C2F004A6E5D /* LoginViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +66,44 @@
 		48E2CD2424C4EE88004A6E5D /* flab2ab */ = {
 			isa = PBXGroup;
 			children = (
+				48E2CD4924C78E00004A6E5D /* Model */,
+				48E2CD4224C78183004A6E5D /* View */,
+				48E2CD4A24C78E0A004A6E5D /* Controller */,
+				48E2CD3024C4EE88004A6E5D /* flab2ab.xcdatamodeld */,
 				48E2CD2524C4EE88004A6E5D /* AppDelegate.swift */,
 				48E2CD2724C4EE88004A6E5D /* SceneDelegate.swift */,
-				48E2CD2924C4EE88004A6E5D /* FirstViewController.swift */,
-				48E2CD2B24C4EE88004A6E5D /* SecondViewController.swift */,
-				48E2CD2D24C4EE88004A6E5D /* Main.storyboard */,
 				48E2CD3324C4EE8C004A6E5D /* Assets.xcassets */,
-				48E2CD3524C4EE8C004A6E5D /* LaunchScreen.storyboard */,
 				48E2CD3824C4EE8C004A6E5D /* Info.plist */,
-				48E2CD3024C4EE88004A6E5D /* flab2ab.xcdatamodeld */,
 			);
 			path = flab2ab;
+			sourceTree = "<group>";
+		};
+		48E2CD4224C78183004A6E5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48E2CD3524C4EE8C004A6E5D /* LaunchScreen.storyboard */,
+				48E2CD2D24C4EE88004A6E5D /* Main.storyboard */,
+				48E2CD4324C78191004A6E5D /* DesignableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		48E2CD4924C78E00004A6E5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48E2CD4A24C78E0A004A6E5D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				48E2CD4024C639D2004A6E5D /* HomeViewController.swift */,
+				48E2CD2924C4EE88004A6E5D /* FirstViewController.swift */,
+				48E2CD2B24C4EE88004A6E5D /* SecondViewController.swift */,
+				48E2CD4724C78C2F004A6E5D /* LoginViewController+Extensions.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +179,12 @@
 			files = (
 				48E2CD2C24C4EE88004A6E5D /* SecondViewController.swift in Sources */,
 				48E2CD2A24C4EE88004A6E5D /* FirstViewController.swift in Sources */,
+				48E2CD4824C78C2F004A6E5D /* LoginViewController+Extensions.swift in Sources */,
 				48E2CD3224C4EE88004A6E5D /* flab2ab.xcdatamodeld in Sources */,
 				48E2CD2624C4EE88004A6E5D /* AppDelegate.swift in Sources */,
+				48E2CD4424C78191004A6E5D /* DesignableView.swift in Sources */,
 				48E2CD2824C4EE88004A6E5D /* SceneDelegate.swift in Sources */,
+				48E2CD4124C639D2004A6E5D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
