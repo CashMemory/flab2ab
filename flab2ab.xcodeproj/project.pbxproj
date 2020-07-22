@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -62,7 +62,6 @@
 				33B1545BC9A2F87F7058C2B2 /* Pods-flab2ab.debug.xcconfig */,
 				A45A7AC0A628D78BDACD16B2 /* Pods-flab2ab.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -121,10 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				48E2CD4024C639D2004A6E5D /* LoginViewController.swift */,
+				48CFC5FF24C8EC0500D1B72C /* RegisterViewController.swift */,
 				48E2CD2924C4EE88004A6E5D /* FirstViewController.swift */,
 				48E2CD2B24C4EE88004A6E5D /* SecondViewController.swift */,
 				48E2CD4724C78C2F004A6E5D /* LoginViewController+Extensions.swift */,
-				48CFC5FF24C8EC0500D1B72C /* RegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
