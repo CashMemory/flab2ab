@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		484FDC8724C8F1330077E606 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 484FDC8624C8F1330077E606 /* GoogleService-Info.plist */; };
 		48CFC60024C8EC0500D1B72C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CFC5FF24C8EC0500D1B72C /* RegisterViewController.swift */; };
+		48D9ED1E24CF77BA00735BE2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9ED1D24CF77BA00735BE2 /* Constants.swift */; };
 		48E2CD2624C4EE88004A6E5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E2CD2524C4EE88004A6E5D /* AppDelegate.swift */; };
 		48E2CD2824C4EE88004A6E5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E2CD2724C4EE88004A6E5D /* SceneDelegate.swift */; };
 		48E2CD2A24C4EE88004A6E5D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E2CD2924C4EE88004A6E5D /* FirstViewController.swift */; };
@@ -27,6 +28,7 @@
 		33B1545BC9A2F87F7058C2B2 /* Pods-flab2ab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flab2ab.debug.xcconfig"; path = "Target Support Files/Pods-flab2ab/Pods-flab2ab.debug.xcconfig"; sourceTree = "<group>"; };
 		484FDC8624C8F1330077E606 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		48CFC5FF24C8EC0500D1B72C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		48D9ED1D24CF77BA00735BE2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48E2CD2224C4EE88004A6E5D /* flab2ab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flab2ab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E2CD2524C4EE88004A6E5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E2CD2724C4EE88004A6E5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				48E2CD3324C4EE8C004A6E5D /* Assets.xcassets */,
 				48E2CD3824C4EE8C004A6E5D /* Info.plist */,
 				484FDC8624C8F1330077E606 /* GoogleService-Info.plist */,
+				48D9ED1D24CF77BA00735BE2 /* Constants.swift */,
 			);
 			path = flab2ab;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				48E2CD2A24C4EE88004A6E5D /* FirstViewController.swift in Sources */,
 				48E2CD4824C78C2F004A6E5D /* LoginViewController+Extensions.swift in Sources */,
 				48E2CD3224C4EE88004A6E5D /* flab2ab.xcdatamodeld in Sources */,
+				48D9ED1E24CF77BA00735BE2 /* Constants.swift in Sources */,
 				48E2CD2624C4EE88004A6E5D /* AppDelegate.swift in Sources */,
 				48E2CD4424C78191004A6E5D /* DesignableView.swift in Sources */,
 				48E2CD2824C4EE88004A6E5D /* SceneDelegate.swift in Sources */,
