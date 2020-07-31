@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		484FDC8724C8F1330077E606 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 484FDC8624C8F1330077E606 /* GoogleService-Info.plist */; };
 		4883D31F24D357570037CE3C /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883D31E24D357570037CE3C /* WorkoutViewController.swift */; };
-		4883D32124D35AE20037CE3C /* PopupTextfieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883D32024D35AE20037CE3C /* PopupTextfieldViewController.swift */; };
-		4883D32324D35D6D0037CE3C /* PopupTextfieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4883D32224D35D6D0037CE3C /* PopupTextfieldViewController.xib */; };
 		48CFC60024C8EC0500D1B72C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CFC5FF24C8EC0500D1B72C /* RegisterViewController.swift */; };
 		48D9ED1E24CF77BA00735BE2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9ED1D24CF77BA00735BE2 /* Constants.swift */; };
 		48E2CD2624C4EE88004A6E5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E2CD2524C4EE88004A6E5D /* AppDelegate.swift */; };
@@ -31,8 +29,6 @@
 		33B1545BC9A2F87F7058C2B2 /* Pods-flab2ab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flab2ab.debug.xcconfig"; path = "Target Support Files/Pods-flab2ab/Pods-flab2ab.debug.xcconfig"; sourceTree = "<group>"; };
 		484FDC8624C8F1330077E606 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4883D31E24D357570037CE3C /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
-		4883D32024D35AE20037CE3C /* PopupTextfieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTextfieldViewController.swift; sourceTree = "<group>"; };
-		4883D32224D35D6D0037CE3C /* PopupTextfieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupTextfieldViewController.xib; sourceTree = "<group>"; };
 		48CFC5FF24C8EC0500D1B72C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		48D9ED1D24CF77BA00735BE2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48E2CD2224C4EE88004A6E5D /* flab2ab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flab2ab.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +110,6 @@
 				48E2CD3524C4EE8C004A6E5D /* LaunchScreen.storyboard */,
 				48E2CD2D24C4EE88004A6E5D /* Main.storyboard */,
 				48E2CD4324C78191004A6E5D /* DesignableView.swift */,
-				4883D32224D35D6D0037CE3C /* PopupTextfieldViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,7 +130,6 @@
 				48E2CD2B24C4EE88004A6E5D /* SecondViewController.swift */,
 				48E2CD4724C78C2F004A6E5D /* LoginViewController+Extensions.swift */,
 				4883D31E24D357570037CE3C /* WorkoutViewController.swift */,
-				4883D32024D35AE20037CE3C /* PopupTextfieldViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,7 +204,6 @@
 			files = (
 				48E2CD3724C4EE8C004A6E5D /* LaunchScreen.storyboard in Resources */,
 				484FDC8724C8F1330077E606 /* GoogleService-Info.plist in Resources */,
-				4883D32324D35D6D0037CE3C /* PopupTextfieldViewController.xib in Resources */,
 				48E2CD3424C4EE8C004A6E5D /* Assets.xcassets in Resources */,
 				48E2CD2F24C4EE88004A6E5D /* Main.storyboard in Resources */,
 			);
@@ -270,7 +263,6 @@
 				4883D31F24D357570037CE3C /* WorkoutViewController.swift in Sources */,
 				48E2CD2A24C4EE88004A6E5D /* FirstViewController.swift in Sources */,
 				48E2CD4824C78C2F004A6E5D /* LoginViewController+Extensions.swift in Sources */,
-				4883D32124D35AE20037CE3C /* PopupTextfieldViewController.swift in Sources */,
 				48E2CD3224C4EE88004A6E5D /* flab2ab.xcdatamodeld in Sources */,
 				48D9ED1E24CF77BA00735BE2 /* Constants.swift in Sources */,
 				48E2CD2624C4EE88004A6E5D /* AppDelegate.swift in Sources */,
