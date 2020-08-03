@@ -16,26 +16,40 @@ class WorkoutViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
     @IBAction func addExercisePressed(_ sender: Any) {
-        addNewExercise()
+        addNewExercisePopup()
+        
     }
     
     //MARK: Public Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // hides empty rows
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
     //MARK: Private Methods
     
-    private func addNewExercise() {
+    fileprivate func addExerciseToWorkout(_ workoutName: String) {
+        workout.addExercise(name: workoutName)
+        
+        let indexPath = IndexPath(row: self.workout.exercises.count - 1, section: 0)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [indexPath], with: .automatic)
+        tableView.endUpdates()
+    }
+    
+    private func addNewExercisePopup() {
         let ac = UIAlertController(title: "Exercise name", message: nil, preferredStyle: .alert)
         ac.addTextField()
         
         let submitAction = UIAlertAction(title: "Add", style: .default) { [unowned ac] _ in
             if let workoutName = ac.textFields![0].text {
-                self.workout.addExercise(name: workoutName)
+                self.addExerciseToWorkout(workoutName)
             }
         }
     
@@ -44,7 +58,6 @@ class WorkoutViewController: UIViewController {
         
         present(ac, animated: true)
     }
-    
 }
 
 //MARK: Extensions
@@ -55,13 +68,13 @@ extension WorkoutViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return workout.exercises.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseCell", for: indexPath)
         
-        cell.textLabel?.text = "Hello World"
+        cell.textLabel?.text = workout.exercises[indexPath.row].name
         
         return cell
     }
