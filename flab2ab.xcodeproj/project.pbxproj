@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		483F145124D6588400C81D46 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483F145024D6588400C81D46 /* ExerciseTableViewCell.swift */; };
+		48441CB724DCBE200093CA44 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48441CB524DCBE200093CA44 /* ExerciseTableViewCell.swift */; };
+		48441CB824DCBE200093CA44 /* ExerciseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48441CB624DCBE200093CA44 /* ExerciseTableViewCell.xib */; };
 		484FDC8724C8F1330077E606 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 484FDC8624C8F1330077E606 /* GoogleService-Info.plist */; };
 		485E9EF424D4B56900237231 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E9EF324D4B56900237231 /* Exercise.swift */; };
 		485E9EF624D4B57100237231 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E9EF524D4B57100237231 /* Workout.swift */; };
@@ -31,7 +32,8 @@
 
 /* Begin PBXFileReference section */
 		33B1545BC9A2F87F7058C2B2 /* Pods-flab2ab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flab2ab.debug.xcconfig"; path = "Target Support Files/Pods-flab2ab/Pods-flab2ab.debug.xcconfig"; sourceTree = "<group>"; };
-		483F145024D6588400C81D46 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		48441CB524DCBE200093CA44 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		48441CB624DCBE200093CA44 /* ExerciseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseTableViewCell.xib; sourceTree = "<group>"; };
 		484FDC8624C8F1330077E606 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		485E9EF324D4B56900237231 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		485E9EF524D4B57100237231 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
@@ -80,7 +82,8 @@
 		483F145224D7967D00C81D46 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				483F145024D6588400C81D46 /* ExerciseTableViewCell.swift */,
+				48441CB524DCBE200093CA44 /* ExerciseTableViewCell.swift */,
+				48441CB624DCBE200093CA44 /* ExerciseTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				48E2CD3724C4EE8C004A6E5D /* LaunchScreen.storyboard in Resources */,
 				484FDC8724C8F1330077E606 /* GoogleService-Info.plist in Resources */,
+				48441CB824DCBE200093CA44 /* ExerciseTableViewCell.xib in Resources */,
 				48E2CD3424C4EE8C004A6E5D /* Assets.xcassets in Resources */,
 				48E2CD2F24C4EE88004A6E5D /* Main.storyboard in Resources */,
 			);
@@ -284,7 +288,7 @@
 				485E9EF624D4B57100237231 /* Workout.swift in Sources */,
 				48E2CD2A24C4EE88004A6E5D /* FirstViewController.swift in Sources */,
 				48E2CD4824C78C2F004A6E5D /* LoginViewController+Extensions.swift in Sources */,
-				483F145124D6588400C81D46 /* ExerciseTableViewCell.swift in Sources */,
+				48441CB724DCBE200093CA44 /* ExerciseTableViewCell.swift in Sources */,
 				485E9EF424D4B56900237231 /* Exercise.swift in Sources */,
 				48E2CD3224C4EE88004A6E5D /* flab2ab.xcdatamodeld in Sources */,
 				48D9ED1E24CF77BA00735BE2 /* Constants.swift in Sources */,

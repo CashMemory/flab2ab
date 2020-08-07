@@ -9,7 +9,7 @@
 import Foundation
 
 struct Workout {
-    var exercises: [Exercise] = []
+    var exercises: [Exercise] = [Exercise(name: "push up"), Exercise(name: "squat"), Exercise(name: "deadlift")]
     
     mutating func addExercise(name: String) {
         exercises.append(Exercise(name: name))

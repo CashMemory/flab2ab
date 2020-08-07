@@ -9,7 +9,8 @@
 import Foundation
 
 struct ExerciseSet {
-    var reps: Int
-    var weight: Float
-    var complete: Bool
+    var setNumber: Int = 0
+    var reps: Int = 0
+    var weight: Float = 0.0
+    var complete: Bool = false
 }

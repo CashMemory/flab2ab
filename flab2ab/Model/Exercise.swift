@@ -10,5 +10,5 @@ import Foundation
 
 struct Exercise {
     let name: String
-    let sets: [ExerciseSet] = []
+    let sets: [ExerciseSet] = [ExerciseSet()]
 }
