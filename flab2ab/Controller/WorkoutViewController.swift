@@ -16,7 +16,7 @@ class WorkoutViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
     @IBAction func addExercisePressed(_ sender: Any) {
-//        addNewExercisePopup()
+        addNewExercisePopup()
     }
     
     //MARK: Public Methods
@@ -31,31 +31,31 @@ class WorkoutViewController: UIViewController {
     }
     
     //MARK: Private Methods
-//
-//    fileprivate func addExerciseToWorkout(_ workoutName: String) {
-//        workout.addExercise(name: workoutName)
-//
-//        let indexPath = IndexPath(row: self.workout.exercises.count - 1, section: 0)
-//        tableView.beginUpdates()
-//        tableView.insertRows(at: [indexPath], with: .automatic)
-//        tableView.endUpdates()
-//    }
-//
-//    private func addNewExercisePopup() {
-//        let ac = UIAlertController(title: "Exercise name", message: nil, preferredStyle: .alert)
-//        ac.addTextField()
-//
-//        let submitAction = UIAlertAction(title: "Add", style: .default) { [unowned ac] _ in
-//            if let workoutName = ac.textFields![0].text {
-//                self.addExerciseToWorkout(workoutName)
-//            }
-//        }
-//
-//        ac.addAction(submitAction)
-//        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//
-//        present(ac, animated: true)
-//    }
+
+    fileprivate func addExerciseToWorkout(_ workoutName: String) {
+        workout.addExercise(name: workoutName)
+
+        let indexPath = IndexPath(row: self.workout.exercises.count - 1, section: 0)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [indexPath], with: .automatic)
+        tableView.endUpdates()
+    }
+
+    private func addNewExercisePopup() {
+        let ac = UIAlertController(title: "Exercise name", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+
+        let submitAction = UIAlertAction(title: "Add", style: .default) { [unowned ac] _ in
+            if let workoutName = ac.textFields![0].text {
+                self.addExerciseToWorkout(workoutName)
+            }
+        }
+
+        ac.addAction(submitAction)
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+        present(ac, animated: true)
+    }
 }
 
 //MARK: Extensions
