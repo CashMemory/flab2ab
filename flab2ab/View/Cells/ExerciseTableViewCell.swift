@@ -10,12 +10,20 @@ import UIKit
 
 class ExerciseTableViewCell: UITableViewCell {
     
+    //MARK: - Properties
+    
     @IBOutlet var setLabel: UILabel!
     @IBOutlet var repsTextField: UITextField!
     @IBOutlet var weightTextField: UITextField!
     
     static let identifier = "ExerciseTableViewCell"
-    var set: ExerciseSet = ExerciseSet()
+    var set: ExerciseSet = ExerciseSet(setNumber: 1) {
+        didSet {
+            setLabel.text = "SET \(set.setNumber)"
+            repsTextField.text = "\(set.reps)"
+            weightTextField.text = "\(set.weight)"
+        }
+    }
     
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)
@@ -23,10 +31,8 @@ class ExerciseTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        setLabel.text = "SET \(set.setNumber)"
-//        repsTextField.text = "\(set.reps)"
-//        weightTextField.text = "\(set.weight)"
     }
+
     
 }
 

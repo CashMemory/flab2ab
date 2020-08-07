@@ -13,4 +13,22 @@ struct ExerciseSet {
     var reps: Int = 0
     var weight: Float = 0.0
     var complete: Bool = false
+    
+    //MARK: - Initializers
+    
+    init(setNumber: Int) {
+        self.setNumber = setNumber
+    }
+    
+    mutating public func setReps(reps: Int) {
+        self.reps = reps
+    }
+    
+    mutating public func setWeight(weight: Float) {
+        self.weight = weight
+    }
+    
+    mutating public func toggleComplete() {
+        complete = !complete
+    }
 }

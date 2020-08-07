@@ -10,5 +10,11 @@ import Foundation
 
 struct Exercise {
     let name: String
-    let sets: [ExerciseSet] = [ExerciseSet()]
+    var sets: [ExerciseSet] = [ExerciseSet(setNumber: 1)]
+    var numberOfSets: Int = 1
+    
+    mutating func addSet() {
+        numberOfSets += 1
+        sets.append(ExerciseSet(setNumber: numberOfSets))
+    }
 }
