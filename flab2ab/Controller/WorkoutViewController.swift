@@ -30,8 +30,6 @@ class WorkoutViewController: UIViewController {
         tableView.register(ExerciseFooter.self, forHeaderFooterViewReuseIdentifier: K.identifiers.exerciseFooter)
         tableView.delegate = self
         tableView.dataSource = self
-        
-        workout.exercises[0].addSet()
     }
     
     //MARK: - Private Methods
@@ -107,6 +105,7 @@ extension WorkoutViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: K.identifiers.exerciseFooter) as! ExerciseFooter
+        
         view.addSetAction = { [unowned self] in
             self.workout.exercises[section].addSet()
             let indexPath = IndexPath(row: self.workout.exercises[section].sets.count - 1, section: section)
@@ -114,6 +113,15 @@ extension WorkoutViewController: UITableViewDataSource, UITableViewDelegate {
             self.tableView.insertRows(at: [indexPath], with: .automatic)
             self.tableView.endUpdates()
         }
+        
+        view.removeSetAction = { [unowned self] in
+            let indexPath = IndexPath(row: self.workout.exercises[section].sets.count - 1, section: section)
+            self.workout.exercises[section].sets.removeLast()
+            self.tableView.beginUpdates()
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView.endUpdates()
+        }
+        
         return view
     }
 
