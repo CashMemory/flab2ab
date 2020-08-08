@@ -17,4 +17,9 @@ struct Exercise {
         numberOfSets += 1
         sets.append(ExerciseSet(setNumber: numberOfSets))
     }
+    
+    mutating func removeSet() {
+        numberOfSets -= 1
+        sets.removeLast()
+    }
 }

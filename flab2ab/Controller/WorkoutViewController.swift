@@ -116,7 +116,7 @@ extension WorkoutViewController: UITableViewDataSource, UITableViewDelegate {
         
         view.removeSetAction = { [unowned self] in
             let indexPath = IndexPath(row: self.workout.exercises[section].sets.count - 1, section: section)
-            self.workout.exercises[section].sets.removeLast()
+            self.workout.exercises[section].removeSet()
             self.tableView.beginUpdates()
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.endUpdates()
