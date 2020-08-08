@@ -13,6 +13,8 @@
 		485E9EF424D4B56900237231 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E9EF324D4B56900237231 /* Exercise.swift */; };
 		485E9EF624D4B57100237231 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E9EF524D4B57100237231 /* Workout.swift */; };
 		485E9EF824D4BE3400237231 /* ExerciseSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E9EF724D4BE3400237231 /* ExerciseSet.swift */; };
+		486EEAF824DF064700B0EA1A /* ExerciseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486EEAF724DF064700B0EA1A /* ExerciseHeader.swift */; };
+		486EEAFB24DF0B2E00B0EA1A /* ExerciseFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486EEAFA24DF0B2E00B0EA1A /* ExerciseFooter.swift */; };
 		4883D31F24D357570037CE3C /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883D31E24D357570037CE3C /* WorkoutViewController.swift */; };
 		48CFC60024C8EC0500D1B72C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CFC5FF24C8EC0500D1B72C /* RegisterViewController.swift */; };
 		48D9ED1E24CF77BA00735BE2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9ED1D24CF77BA00735BE2 /* Constants.swift */; };
@@ -38,6 +40,8 @@
 		485E9EF324D4B56900237231 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		485E9EF524D4B57100237231 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		485E9EF724D4BE3400237231 /* ExerciseSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSet.swift; sourceTree = "<group>"; };
+		486EEAF724DF064700B0EA1A /* ExerciseHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHeader.swift; sourceTree = "<group>"; };
+		486EEAFA24DF0B2E00B0EA1A /* ExerciseFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFooter.swift; sourceTree = "<group>"; };
 		4883D31E24D357570037CE3C /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		48CFC5FF24C8EC0500D1B72C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		48D9ED1D24CF77BA00735BE2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -88,6 +92,16 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		486EEAF924DF0B0200B0EA1A /* Workout Table */ = {
+			isa = PBXGroup;
+			children = (
+				486EEAF724DF064700B0EA1A /* ExerciseHeader.swift */,
+				486EEAFA24DF0B2E00B0EA1A /* ExerciseFooter.swift */,
+				483F145224D7967D00C81D46 /* Cells */,
+			);
+			path = "Workout Table";
+			sourceTree = "<group>";
+		};
 		48E2CD1924C4EE88004A6E5D = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +140,7 @@
 		48E2CD4224C78183004A6E5D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				483F145224D7967D00C81D46 /* Cells */,
+				486EEAF924DF0B0200B0EA1A /* Workout Table */,
 				48E2CD3524C4EE8C004A6E5D /* LaunchScreen.storyboard */,
 				48E2CD2D24C4EE88004A6E5D /* Main.storyboard */,
 				48E2CD4324C78191004A6E5D /* DesignableView.swift */,
@@ -287,6 +301,7 @@
 				4883D31F24D357570037CE3C /* WorkoutViewController.swift in Sources */,
 				485E9EF624D4B57100237231 /* Workout.swift in Sources */,
 				48E2CD2A24C4EE88004A6E5D /* FirstViewController.swift in Sources */,
+				486EEAF824DF064700B0EA1A /* ExerciseHeader.swift in Sources */,
 				48E2CD4824C78C2F004A6E5D /* LoginViewController+Extensions.swift in Sources */,
 				48441CB724DCBE200093CA44 /* ExerciseTableViewCell.swift in Sources */,
 				485E9EF424D4B56900237231 /* Exercise.swift in Sources */,
@@ -297,6 +312,7 @@
 				48E2CD4424C78191004A6E5D /* DesignableView.swift in Sources */,
 				48E2CD2824C4EE88004A6E5D /* SceneDelegate.swift in Sources */,
 				48E2CD4124C639D2004A6E5D /* LoginViewController.swift in Sources */,
+				486EEAFB24DF0B2E00B0EA1A /* ExerciseFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,13 +17,7 @@ class ExerciseTableViewCell: UITableViewCell {
     @IBOutlet var weightTextField: UITextField!
     
     static let identifier = "ExerciseTableViewCell"
-    var set: ExerciseSet = ExerciseSet(setNumber: 1) {
-        didSet {
-            setLabel.text = "SET \(set.setNumber)"
-            repsTextField.text = "\(set.reps)"
-            weightTextField.text = "\(set.weight)"
-        }
-    }
+    var set: ExerciseSet!
     
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)
@@ -31,6 +25,10 @@ class ExerciseTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        if let thisSet = set {
+            self.setLabel?.text = "SET \(thisSet.setNumber)"
+            print("SET \(thisSet.setNumber)")
+        }
     }
 
     

@@ -26,6 +26,8 @@ class WorkoutViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.register(ExerciseTableViewCell.nib(), forCellReuseIdentifier: ExerciseTableViewCell.identifier)
+        tableView.register(ExerciseHeader.self, forHeaderFooterViewReuseIdentifier: "ExerciseHeader")
+        tableView.register(ExerciseFooter.self, forHeaderFooterViewReuseIdentifier: "ExerciseFooter")
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -36,9 +38,9 @@ class WorkoutViewController: UIViewController {
     fileprivate func addExerciseToWorkout(_ workoutName: String) {
         workout.addExercise(name: workoutName)
 
-        let indexPath = IndexPath(row: self.workout.exercises.count - 1, section: 0)
+        let indexSet = IndexSet(arrayLiteral: self.workout.exercises.count - 1)
         tableView.beginUpdates()
-        tableView.insertRows(at: [indexPath], with: .automatic)
+        tableView.insertSections(indexSet, with: .automatic)
         tableView.endUpdates()
     }
 
@@ -64,7 +66,12 @@ class WorkoutViewController: UIViewController {
 extension WorkoutViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ExerciseTableViewCell.identifier, for: indexPath) as! ExerciseTableViewCell
-        cell.set = workout.exercises[indexPath.section].sets[indexPath.row]
+        cell.set? = workout.exercises[indexPath.section].sets[indexPath.row]
+        
+        self.tableView.beginUpdates()
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        self.tableView.endUpdates()
+        
         return cell
     }
     
@@ -80,9 +87,27 @@ extension WorkoutViewController: UITableViewDataSource, UITableViewDelegate {
         return 85
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return workout.exercises[section].name
+    // section customization
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ExerciseHeader") as! ExerciseHeader
+        view.title.text = workout.exercises[section].name
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ExerciseFooter") as! ExerciseFooter
+        return view
+    }
+
 }
 
 
