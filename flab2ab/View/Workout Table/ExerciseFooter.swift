@@ -13,9 +13,11 @@ class ExerciseFooter: UITableViewHeaderFooterView {
     let addSetButton = UIButton()
     let removeSetButton = UIButton()
     
+    var addSetAction: (() -> ())?
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
+        self.sendSubviewToBack(contentView)
         configureContents()
     }
     
@@ -27,6 +29,8 @@ class ExerciseFooter: UITableViewHeaderFooterView {
         addSetButton.setTitle("Add Set", for: .normal)
         addSetButton.setTitleColor(.black, for: .normal)
         addSetButton.frame = CGRect(x: 200, y: 10, width: 150, height: 40)
+        addSetButton.backgroundColor = .green
+        addSetButton.addTarget(self, action: #selector(addSet), for: .touchUpInside)
         
         removeSetButton.setTitle("Remove Set", for: .normal)
         removeSetButton.setTitleColor(.red, for: .normal)
@@ -34,6 +38,10 @@ class ExerciseFooter: UITableViewHeaderFooterView {
         
         contentView.addSubview(addSetButton)
         contentView.addSubview(removeSetButton)
+    }
+
+    @objc func addSet(_ sender: AnyObject) {
+        addSetAction?()
     }
 
 }
