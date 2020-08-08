@@ -26,8 +26,8 @@ class WorkoutViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.register(ExerciseTableViewCell.nib(), forCellReuseIdentifier: ExerciseTableViewCell.identifier)
-        tableView.register(ExerciseHeader.self, forHeaderFooterViewReuseIdentifier: "ExerciseHeader")
-        tableView.register(ExerciseFooter.self, forHeaderFooterViewReuseIdentifier: "ExerciseFooter")
+        tableView.register(ExerciseHeader.self, forHeaderFooterViewReuseIdentifier: K.identifiers.exerciseHeader)
+        tableView.register(ExerciseFooter.self, forHeaderFooterViewReuseIdentifier: K.identifiers.exerciseFooter)
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -94,7 +94,7 @@ extension WorkoutViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ExerciseHeader") as! ExerciseHeader
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: K.identifiers.exerciseHeader) as! ExerciseHeader
         view.title.text = workout.exercises[section].name
         return view
     }
@@ -104,7 +104,7 @@ extension WorkoutViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ExerciseFooter") as! ExerciseFooter
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: K.identifiers.exerciseFooter) as! ExerciseFooter
         return view
     }
 

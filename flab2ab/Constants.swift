@@ -9,4 +9,10 @@
 struct K {
     static let registerSegue = "RegisterToHome"
     static let loginSegue = "LoginToHome"
+    
+    struct identifiers {
+        static let exerciseCell = "ExerciseCell"
+        static let exerciseHeader = "ExerciseHeader"
+        static let exerciseFooter = "ExerciseFooter"
+    }
 }
