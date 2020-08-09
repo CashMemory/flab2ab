@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "flab to ab 1024.png",
+      "filename" : "appstore.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "flab to ab 1024@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "flab to ab 1024@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

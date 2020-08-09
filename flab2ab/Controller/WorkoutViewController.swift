@@ -15,7 +15,13 @@ class WorkoutViewController: UIViewController {
     var workout = Workout()
     var delegate: AddToMyWorkoutsProtocol? = nil
     
+    @IBOutlet weak var workoutTitle: UITextField!
     @IBOutlet var tableView: UITableView!
+    
+    @IBAction func workoutTitleEdited(_ sender: UITextField) {
+        workout.title = sender.text!
+        print(workout.title)
+    }
 
     @IBAction func addExercisePressed(_ sender: UIButton) {
         addNewExercisePopup()
@@ -37,6 +43,8 @@ class WorkoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        workoutTitle.text = workout.title
         
         tableView.register(ExerciseTableViewCell.nib(), forCellReuseIdentifier: ExerciseTableViewCell.identifier)
         tableView.register(ExerciseHeader.self, forHeaderFooterViewReuseIdentifier: K.identifiers.exerciseHeader)

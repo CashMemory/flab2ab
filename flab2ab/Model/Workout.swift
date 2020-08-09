@@ -9,6 +9,7 @@
 import Foundation
 
 struct Workout {
+    var title = "New Workout"
     var exercises: [Exercise] = [Exercise(name: "push up"), Exercise(name: "squat"), Exercise(name: "deadlift")]
     
     mutating func addExercise(name: String) {

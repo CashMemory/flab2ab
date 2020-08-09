@@ -116,6 +116,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="22"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="workoutTitleEdited:" destination="QkN-n8-nYm" eventType="editingDidEnd" id="Ei8-Rq-ZHq"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -169,6 +172,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="gWs-9p-BgU" id="TNN-HE-vRW"/>
+                        <outlet property="workoutTitle" destination="fGa-R5-mAb" id="d9Q-uS-WHg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5J-n8-Cyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
