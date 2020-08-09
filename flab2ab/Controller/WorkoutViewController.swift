@@ -26,6 +26,9 @@ class WorkoutViewController: UIViewController {
         if self.delegate != nil {
             self.delegate?.addToMyWorkouts(workout)
         }
+        dismiss(animated: true, completion: nil)
+        
+        
         // send workout to MyWorkouts
         // save to core data?
     }
