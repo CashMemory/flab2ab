@@ -13,11 +13,21 @@ class WorkoutViewController: UIViewController {
     //MARK: - Properties
     
     var workout = Workout()
+    var delegate: AddToMyWorkoutsProtocol? = nil
     
     @IBOutlet var tableView: UITableView!
 
-    @IBAction func addExercisePressed(_ sender: Any) {
+    @IBAction func addExercisePressed(_ sender: UIButton) {
         addNewExercisePopup()
+    }
+    
+    @IBAction func savePressed(_ sender: UIButton) {
+        //TODO: - save all text fields to workout
+        if self.delegate != nil {
+            self.delegate?.addToMyWorkouts(workout)
+        }
+        // send workout to MyWorkouts
+        // save to core data?
     }
     
     //MARK: - Public Methods
@@ -127,5 +137,7 @@ extension WorkoutViewController: UITableViewDataSource, UITableViewDelegate {
 
 }
 
-
+protocol AddToMyWorkoutsProtocol {
+    func addToMyWorkouts(_ workout: Workout)
+}
 
