@@ -10,8 +10,8 @@ import Foundation
 
 struct Exercise {
     let name: String
-    var sets: [ExerciseSet] = [ExerciseSet(setNumber: 1)]
-    var numberOfSets: Int = 1
+    var sets: [ExerciseSet] = []
+    var numberOfSets: Int = 0
     
     mutating func addSet() {
         numberOfSets += 1

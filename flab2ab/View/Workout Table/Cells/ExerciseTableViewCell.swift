@@ -10,11 +10,26 @@ import UIKit
 
 class ExerciseTableViewCell: UITableViewCell {
     
+    //MARK: - interface builder
+    
     @IBOutlet var setLabel: UILabel!
     @IBOutlet var repsTextField: UITextField!
     @IBOutlet var weightTextField: UITextField!
     
+    @IBAction func repsFieldEdited(_ sender: UITextField) {
+        set?.reps = Int(repsTextField.text!)!
+    }
+    @IBAction func weightFieldEdited(_ sender: UITextField) {
+        set?.weight = (weightTextField.text! as NSString).floatValue
+    }
+    
+    //MARK: - properties
+    
+    var set: ExerciseSet? = nil
+    
     static let identifier = "ExerciseTableViewCell"
+    
+    //MARK: - functions
     
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)
@@ -25,9 +40,10 @@ class ExerciseTableViewCell: UITableViewCell {
     }
 
     func configure(set: ExerciseSet) {
-        setLabel.text = "SET \(set.setNumber)"
-        repsTextField.text = "\(set.reps)"
-        weightTextField.text = "\(set.weight)"
+        self.set = set
+        setLabel.text = "SET \(self.set!.setNumber)"
+        repsTextField.text = "\(self.set!.reps)"
+        weightTextField.text = "\(self.set!.weight)"
     }
 }
 

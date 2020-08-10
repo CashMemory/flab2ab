@@ -28,15 +28,10 @@ class WorkoutViewController: UIViewController {
     }
     
     @IBAction func savePressed(_ sender: UIButton) {
-        //TODO: - save all text fields to workout
         if self.delegate != nil {
             self.delegate?.addToMyWorkouts(workout)
         }
         dismiss(animated: true, completion: nil)
-        
-        
-        // send workout to MyWorkouts
-        // save to core data?
     }
     
     //MARK: - Public Methods
@@ -51,6 +46,12 @@ class WorkoutViewController: UIViewController {
         tableView.register(ExerciseFooter.self, forHeaderFooterViewReuseIdentifier: K.identifiers.exerciseFooter)
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.keyboardDismissMode = .onDrag
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
     //MARK: - Private Methods
@@ -148,7 +149,8 @@ extension WorkoutViewController: UITableViewDataSource, UITableViewDelegate {
 
 }
 
+//MARK: - Protocols
+
 protocol AddToMyWorkoutsProtocol {
     func addToMyWorkouts(_ workout: Workout)
 }
-
