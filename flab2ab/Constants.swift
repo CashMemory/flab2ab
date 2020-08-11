@@ -14,6 +14,7 @@ struct K {
         static let exerciseCell = "ExerciseCell"
         static let exerciseHeader = "ExerciseHeader"
         static let exerciseFooter = "ExerciseFooter"
+        static let myWorkoutsCell = "MyWorkoutsCell"
     }
     
     struct segues {

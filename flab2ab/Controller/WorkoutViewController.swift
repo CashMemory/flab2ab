@@ -41,17 +41,7 @@ class WorkoutViewController: UIViewController {
         
         workoutTitle.text = workout.title
         
-        tableView.register(ExerciseTableViewCell.nib(), forCellReuseIdentifier: ExerciseTableViewCell.identifier)
-        tableView.register(ExerciseHeader.self, forHeaderFooterViewReuseIdentifier: K.identifiers.exerciseHeader)
-        tableView.register(ExerciseFooter.self, forHeaderFooterViewReuseIdentifier: K.identifiers.exerciseFooter)
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        tableView.keyboardDismissMode = .onDrag
-        
-        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
+        configureTableView()
     }
     
     //MARK: - Private Methods
@@ -79,6 +69,21 @@ class WorkoutViewController: UIViewController {
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 
         present(ac, animated: true)
+    }
+    
+    private func configureTableView() {
+        tableView.register(ExerciseTableViewCell.nib(), forCellReuseIdentifier: ExerciseTableViewCell.identifier)
+        tableView.register(ExerciseHeader.self, forHeaderFooterViewReuseIdentifier: K.identifiers.exerciseHeader)
+        tableView.register(ExerciseFooter.self, forHeaderFooterViewReuseIdentifier: K.identifiers.exerciseFooter)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.keyboardDismissMode = .onDrag
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
 }
 

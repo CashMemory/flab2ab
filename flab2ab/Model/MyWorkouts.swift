@@ -9,9 +9,9 @@
 import Foundation
 
 struct MyWorkouts {
-    var myWorkouts: [Workout] = []
+    var workouts: [Workout] = []
     
     mutating func addWorkout(_ workout: Workout) {
-        myWorkouts.append(workout)
+        workouts.append(workout)
     }
 }

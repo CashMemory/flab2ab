@@ -47,6 +47,43 @@
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="200" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jDE-RZ-DtH">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="567"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyWorkoutsCell" id="ABn-kN-RF7" customClass="MyWorkoutsCell" customModule="flab2ab" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="382" height="46.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ABn-kN-RF7" id="7we-WD-oj5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="46.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fhY-Re-rTI">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="46.5"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pg-aV-HMx">
+                                                                            <rect key="frame" x="16" y="8" width="236" height="30.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xym-fe-j6f">
+                                                                            <rect key="frame" x="268" y="8" width="98" height="30.5"/>
+                                                                            <state key="normal" title="START"/>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="fhY-Re-rTI" secondAttribute="trailing" id="6iW-E9-GWc"/>
+                                                                <constraint firstItem="fhY-Re-rTI" firstAttribute="top" secondItem="7we-WD-oj5" secondAttribute="top" id="9nx-T1-ffx"/>
+                                                                <constraint firstAttribute="bottom" secondItem="fhY-Re-rTI" secondAttribute="bottom" id="qaH-iX-BSP"/>
+                                                                <constraint firstItem="fhY-Re-rTI" firstAttribute="leading" secondItem="7we-WD-oj5" secondAttribute="leading" id="wT5-my-ZKg"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="workoutTitleLabel" destination="1Pg-aV-HMx" id="tAg-ta-MvQ"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
                                             </tableView>
                                         </subviews>
                                     </stackView>
@@ -64,6 +101,9 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Workouts" id="2Gr-Ge-pWA"/>
+                    <connections>
+                        <outlet property="tableView" destination="jDE-RZ-DtH" id="XXi-Tr-Zei"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

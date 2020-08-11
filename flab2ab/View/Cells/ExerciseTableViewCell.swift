@@ -37,6 +37,8 @@ class ExerciseTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.repsTextField.keyboardType = .decimalPad
+        self.weightTextField.keyboardType = .decimalPad
     }
 
     func configure(set: ExerciseSet) {
