@@ -67,6 +67,9 @@
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xym-fe-j6f">
                                                                             <rect key="frame" x="268" y="8" width="98" height="30.5"/>
                                                                             <state key="normal" title="START"/>
+                                                                            <connections>
+                                                                                <segue destination="kHR-hb-wDm" kind="show" id="gkP-fp-dvJ"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                     <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
@@ -109,10 +112,76 @@
             </objects>
             <point key="canvasLocation" x="1659.4202898550725" y="-320.08928571428572"/>
         </scene>
+        <!--Workout Title-->
+        <scene sceneID="bDL-9N-gD8">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XFn-Mc-ywW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="kHR-hb-wDm" customClass="WorkoutViewController" customModule="flab2ab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iv5-AC-xdj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hV8-Ov-aof">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5MF-T8-rnc">
+                                        <rect key="frame" x="8" y="8" width="398" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFD-0R-8LY">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIT-dJ-eOx">
+                                                <rect key="frame" x="310" y="0.0" width="88" height="20.5"/>
+                                                <state key="normal" title="Edit Workout"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kND-NC-vb1">
+                                        <rect key="frame" x="8" y="36.5" width="398" height="628.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutCell" id="dJy-NF-XQh">
+                                                <rect key="frame" x="0.0" y="28" width="398" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dJy-NF-XQh" id="ELr-ji-qhs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hV8-Ov-aof" firstAttribute="top" secondItem="Ng0-dP-9AB" secondAttribute="top" id="2Cx-Pt-7eg"/>
+                            <constraint firstItem="Ng0-dP-9AB" firstAttribute="bottom" secondItem="hV8-Ov-aof" secondAttribute="bottom" id="3P9-7P-Hwv"/>
+                            <constraint firstItem="hV8-Ov-aof" firstAttribute="leading" secondItem="Ng0-dP-9AB" secondAttribute="leading" id="Dpp-NC-fHs"/>
+                            <constraint firstItem="Ng0-dP-9AB" firstAttribute="trailing" secondItem="hV8-Ov-aof" secondAttribute="trailing" id="EVh-JU-t6Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ng0-dP-9AB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Workout Title" id="jiE-JW-u9g">
+                        <barButtonItem key="backBarButtonItem" title="  " id="u3a-kU-7xz"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editWorkoutButton" destination="aIT-dJ-eOx" id="EIL-0V-4PO"/>
+                        <outlet property="workoutTableView" destination="kND-NC-vb1" id="rEp-XE-l3V"/>
+                        <outlet property="workoutTimerLabel" destination="uFD-0R-8LY" id="QFd-Xr-3sX"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2703" y="-994"/>
+        </scene>
         <!--WorkoutViewController-->
         <scene sceneID="O3K-KA-Ckr">
             <objects>
-                <viewController title="WorkoutViewController" id="QkN-n8-nYm" customClass="WorkoutViewController" customModule="flab2ab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="WorkoutViewController" id="QkN-n8-nYm" customClass="CreateWorkoutViewController" customModule="flab2ab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tof-Iw-9Qv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

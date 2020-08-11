@@ -22,7 +22,7 @@ class MyWorkoutsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "createWorkout" {
-            let workoutVC: WorkoutViewController = segue.destination as! WorkoutViewController
+            let workoutVC: CreateWorkoutViewController = segue.destination as! CreateWorkoutViewController
             workoutVC.delegate = self
         }
     }
