@@ -10,11 +10,16 @@ import UIKit
 
 class MyWorkoutsCell: UITableViewCell {
     
+    var workout: Workout? = nil {
+        didSet {
+            workoutTitleLabel.text = workout?.title
+        }
+    }
+    
     @IBOutlet weak var workoutTitleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

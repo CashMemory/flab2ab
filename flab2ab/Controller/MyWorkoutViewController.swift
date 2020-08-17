@@ -47,7 +47,8 @@ extension MyWorkoutsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.identifiers.myWorkoutsCell, for: indexPath) as! MyWorkoutsCell
-        cell.workoutTitleLabel?.text = myWorkouts.workouts[indexPath.row].title
+//        cell.workoutTitleLabel?.text = myWorkouts.workouts[indexPath.row].title
+        cell.workout = myWorkouts.workouts[indexPath.row]
         return cell
     }
     
