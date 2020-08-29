@@ -25,6 +25,10 @@ class MyWorkoutsViewController: UIViewController {
             let workoutVC: CreateWorkoutViewController = segue.destination as! CreateWorkoutViewController
             workoutVC.delegate = self
         }
+        else if segue.identifier == K.segues.createWorkoutSegue {
+            let workoutVC: WorkoutViewController = segue.destination as! WorkoutViewController
+            workoutVC.workout = myWorkouts.workouts[(sender as! NSIndexPath).row]
+        }
     }
 }
 
@@ -47,10 +51,11 @@ extension MyWorkoutsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.identifiers.myWorkoutsCell, for: indexPath) as! MyWorkoutsCell
-//        cell.workoutTitleLabel?.text = myWorkouts.workouts[indexPath.row].title
         cell.workout = myWorkouts.workouts[indexPath.row]
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: K.segues.createWorkoutSegue, sender: indexPath)
+    }
 }

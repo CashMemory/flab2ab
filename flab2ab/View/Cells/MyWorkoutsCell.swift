@@ -10,6 +10,7 @@ import UIKit
 
 class MyWorkoutsCell: UITableViewCell {
     
+    var delegate: StartWorkoutDelegate? = nil
     var workout: Workout? = nil {
         didSet {
             workoutTitleLabel.text = workout?.title
@@ -17,7 +18,12 @@ class MyWorkoutsCell: UITableViewCell {
     }
     
     @IBOutlet weak var workoutTitleLabel: UILabel!
-
+    @IBAction func startWorkoutTapped(_ sender: UIButton) {
+        if let w = workout {
+            delegate?.didTapStartWorkout(w)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -28,4 +34,10 @@ class MyWorkoutsCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+}
+
+//MARK: - Protocols
+
+protocol StartWorkoutDelegate {
+    func didTapStartWorkout(_ workout: Workout)
 }

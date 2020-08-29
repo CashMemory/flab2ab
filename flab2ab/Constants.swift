@@ -18,6 +18,6 @@ struct K {
     }
     
     struct segues {
-        static let createWorkoutSegue = "createWorkout"
+        static let createWorkoutSegue = "CreateWorkout"
     }
 }
