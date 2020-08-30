@@ -23,6 +23,7 @@ class WorkoutViewController: UIViewController {
         self.title = workout.title
         configureTableView()
         configureNavBar()
+        configureTimer()
     }
     
     private func configureTableView() {
