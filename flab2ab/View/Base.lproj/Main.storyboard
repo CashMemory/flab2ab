@@ -118,22 +118,22 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5MF-T8-rnc">
-                                        <rect key="frame" x="8" y="8" width="398" height="20.5"/>
+                                        <rect key="frame" x="8" y="8" width="398" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFD-0R-8LY">
-                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIT-dJ-eOx">
-                                                <rect key="frame" x="310" y="0.0" width="88" height="20.5"/>
+                                                <rect key="frame" x="310" y="0.0" width="88" height="30"/>
                                                 <state key="normal" title="Edit Workout"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kND-NC-vb1">
-                                        <rect key="frame" x="8" y="36.5" width="398" height="628.5"/>
+                                        <rect key="frame" x="8" y="46" width="398" height="619"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </tableView>
                                 </subviews>
@@ -149,9 +149,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ng0-dP-9AB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Workout Title" id="jiE-JW-u9g">
-                        <barButtonItem key="backBarButtonItem" title="  " id="u3a-kU-7xz"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Workout Title" id="jiE-JW-u9g"/>
                     <connections>
                         <outlet property="editWorkoutButton" destination="aIT-dJ-eOx" id="EIL-0V-4PO"/>
                         <outlet property="tableView" destination="kND-NC-vb1" id="PbW-ZV-z7N"/>

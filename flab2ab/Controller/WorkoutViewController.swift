@@ -22,8 +22,7 @@ class WorkoutViewController: UIViewController {
     override func viewDidLoad() {
         self.title = workout.title
         configureTableView()
-        startDate = Date()
-        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+        configureNavBar()
     }
     
     private func configureTableView() {
@@ -40,12 +39,41 @@ class WorkoutViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    @objc func updateTime() {
+    private func configureNavBar() {
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(didTapBackButton))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Finish Workout", style: .plain, target: self, action: #selector(didTapFinishWorkout))
+    }
+    
+    private func configureTimer() {
+        startDate = Date()
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTime(sender: UIBarButtonItem) {
         let currentDate = Date()
         let calendar = Calendar.current
         
         let diff = calendar.dateComponents([.hour, .minute, .second], from: startDate!, to: currentDate)
         workoutTimerLabel.text = String(format: "%02d:%02d:%02d", diff.hour!, diff.minute!, diff.second!)
+    }
+    
+    @objc func didTapFinishWorkout() {
+        // TODO - this should save the workout to a "workout history" global
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func didTapBackButton() {
+        let ac = UIAlertController(title: "Cancel workout?", message: nil, preferredStyle: .alert)
+        
+        let submitAction = UIAlertAction(title: "Cancel", style: .default) { void in
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        ac.addAction(submitAction)
+        ac.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        present(ac, animated: true)
     }
 }
 
