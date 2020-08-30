@@ -16,10 +16,14 @@ class WorkoutViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var workout: Workout!
+    var workoutTimer = Timer()
+    var startDate: Date?
     
     override func viewDidLoad() {
         self.title = workout.title
         configureTableView()
+        startDate = Date()
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
     
     private func configureTableView() {
@@ -34,6 +38,14 @@ class WorkoutViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+    }
+    
+    @objc func updateTime() {
+        let currentDate = Date()
+        let calendar = Calendar.current
+        
+        let diff = calendar.dateComponents([.hour, .minute, .second], from: startDate!, to: currentDate)
+        workoutTimerLabel.text = String(format: "%02d:%02d:%02d", diff.hour!, diff.minute!, diff.second!)
     }
 }
 
