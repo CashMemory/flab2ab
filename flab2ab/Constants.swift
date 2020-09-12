@@ -19,5 +19,10 @@ struct K {
     
     struct segues {
         static let createWorkoutSegue = "CreateWorkout"
+        static let beginWorkoutSegue = "BeginWorkout"
+    }
+    
+    struct FStore {
+        static let workoutHistoryCollection = "Workout History"
     }
 }

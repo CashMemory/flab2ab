@@ -20,6 +20,7 @@
 		486EEAFB24DF0B2E00B0EA1A /* ExerciseFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486EEAFA24DF0B2E00B0EA1A /* ExerciseFooter.swift */; };
 		486EEAFD24E0A56100B0EA1A /* MyWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486EEAFC24E0A56100B0EA1A /* MyWorkouts.swift */; };
 		4883D31F24D357570037CE3C /* CreateWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883D31E24D357570037CE3C /* CreateWorkoutViewController.swift */; };
+		48BCD1F4250D6AF800F3D86A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BCD1F3250D6AF800F3D86A /* HomeViewController.swift */; };
 		48CFC60024C8EC0500D1B72C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CFC5FF24C8EC0500D1B72C /* RegisterViewController.swift */; };
 		48D9ED1E24CF77BA00735BE2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9ED1D24CF77BA00735BE2 /* Constants.swift */; };
 		48E2CD2624C4EE88004A6E5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E2CD2524C4EE88004A6E5D /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 		48E2CD4124C639D2004A6E5D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E2CD4024C639D2004A6E5D /* LoginViewController.swift */; };
 		48E2CD4424C78191004A6E5D /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E2CD4324C78191004A6E5D /* DesignableView.swift */; };
 		48E2CD4824C78C2F004A6E5D /* LoginViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E2CD4724C78C2F004A6E5D /* LoginViewController+Extensions.swift */; };
+		48E4F5DC250D719800F3AEBE /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4F5DB250D719800F3AEBE /* Exercises.swift */; };
 		C7761F616F4FFDB1C18E671B /* Pods_flab2ab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D205B11D8A8711A97744DAA3 /* Pods_flab2ab.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,7 @@
 		486EEAFA24DF0B2E00B0EA1A /* ExerciseFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFooter.swift; sourceTree = "<group>"; };
 		486EEAFC24E0A56100B0EA1A /* MyWorkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkouts.swift; sourceTree = "<group>"; };
 		4883D31E24D357570037CE3C /* CreateWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutViewController.swift; sourceTree = "<group>"; };
+		48BCD1F3250D6AF800F3D86A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		48CFC5FF24C8EC0500D1B72C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		48D9ED1D24CF77BA00735BE2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48E2CD2224C4EE88004A6E5D /* flab2ab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flab2ab.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +67,7 @@
 		48E2CD4024C639D2004A6E5D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		48E2CD4324C78191004A6E5D /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		48E2CD4724C78C2F004A6E5D /* LoginViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+Extensions.swift"; sourceTree = "<group>"; };
+		48E4F5DB250D719800F3AEBE /* Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
 		A45A7AC0A628D78BDACD16B2 /* Pods-flab2ab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flab2ab.release.xcconfig"; path = "Target Support Files/Pods-flab2ab/Pods-flab2ab.release.xcconfig"; sourceTree = "<group>"; };
 		D205B11D8A8711A97744DAA3 /* Pods_flab2ab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flab2ab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -162,6 +166,7 @@
 				485E9EF324D4B56900237231 /* Exercise.swift */,
 				485E9EF724D4BE3400237231 /* ExerciseSet.swift */,
 				486EEAFC24E0A56100B0EA1A /* MyWorkouts.swift */,
+				48E4F5DB250D719800F3AEBE /* Exercises.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 		48E2CD4A24C78E0A004A6E5D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				48BCD1F3250D6AF800F3D86A /* HomeViewController.swift */,
 				48E2CD4024C639D2004A6E5D /* LoginViewController.swift */,
 				48CFC5FF24C8EC0500D1B72C /* RegisterViewController.swift */,
 				48E2CD4724C78C2F004A6E5D /* LoginViewController+Extensions.swift */,
@@ -310,6 +316,7 @@
 				4883D31F24D357570037CE3C /* CreateWorkoutViewController.swift in Sources */,
 				485E9EF624D4B57100237231 /* Workout.swift in Sources */,
 				486EEAF824DF064700B0EA1A /* ExerciseHeader.swift in Sources */,
+				48BCD1F4250D6AF800F3D86A /* HomeViewController.swift in Sources */,
 				48568B7424E3439600072516 /* MyWorkoutsCell.swift in Sources */,
 				48E2CD4824C78C2F004A6E5D /* LoginViewController+Extensions.swift in Sources */,
 				48441CB724DCBE200093CA44 /* ExerciseTableViewCell.swift in Sources */,
@@ -325,6 +332,7 @@
 				486EEAFD24E0A56100B0EA1A /* MyWorkouts.swift in Sources */,
 				48E2CD4124C639D2004A6E5D /* LoginViewController.swift in Sources */,
 				486EEAFB24DF0B2E00B0EA1A /* ExerciseFooter.swift in Sources */,
+				48E4F5DC250D719800F3AEBE /* Exercises.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

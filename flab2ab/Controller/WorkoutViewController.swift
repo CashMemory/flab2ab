@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class WorkoutViewController: UIViewController {
     
@@ -18,6 +20,8 @@ class WorkoutViewController: UIViewController {
     var workout: Workout!
     var workoutTimer = Timer()
     var startDate: Date?
+    
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         self.title = workout.title
@@ -61,6 +65,17 @@ class WorkoutViewController: UIViewController {
     
     @objc func didTapFinishWorkout() {
         // TODO - this should save the workout to a "workout history" global
+        
+        db.collection(K.FStore.workoutHistoryCollection).addDocument(data: [
+            "title": workout.title
+            ]) { (error) in
+                if let e = error {
+                    print("\(e)")
+                } else {
+                    print("saved data")
+                }
+            }
+        
         self.navigationController?.popViewController(animated: true)
     }
     
