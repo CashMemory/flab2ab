@@ -7,7 +7,7 @@
 //
 
 struct ExerciseList {
-    let list = [
+    let exercises = [
         "Bicep Curl (Dumbbell)",
         "Shoulder Press (Dumbbell)"
     ]

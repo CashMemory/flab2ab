@@ -15,14 +15,22 @@ struct K {
         static let exerciseHeader = "ExerciseHeader"
         static let exerciseFooter = "ExerciseFooter"
         static let myWorkoutsCell = "MyWorkoutsCell"
+        static let exerciseSelectCell = "ExerciseSelect"
     }
     
     struct segues {
         static let createWorkoutSegue = "CreateWorkout"
         static let beginWorkoutSegue = "BeginWorkout"
+        static let startExerciseSegue = "StartExercise"
     }
     
     struct FStore {
         static let workoutHistoryCollection = "Workout History"
     }
+    
+    static let availableExercises = [
+        "Bicep Curl (Dumbbell)",
+        "Shoulder Press (Dumbbell)"
+    ]
+    
 }

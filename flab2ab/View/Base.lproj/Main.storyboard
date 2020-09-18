@@ -338,13 +338,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Flab2ab" id="gcf-XW-1DA"/>
+                    <navigationItem key="navigationItem" title="Flab2ab" id="gcf-XW-1DA">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="NWO-Xi-jEF"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1659.4202898550725" y="359.59821428571428"/>
         </scene>
-        <!--Workout Title-->
+        <!--Workout-->
         <scene sceneID="73P-Fw-din">
             <objects>
                 <viewController id="NgX-fd-S3D" sceneMemberID="viewController">
@@ -386,7 +388,7 @@
                                                 <rect key="frame" x="0.0" y="36.5" width="382" height="571.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="spj-ao-UNN">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExerciseSelect" id="spj-ao-UNN">
                                                         <rect key="frame" x="0.0" y="28" width="382" height="43.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="spj-ao-UNN" id="16f-8z-392">
@@ -411,7 +413,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bab-i2-dda"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Workout Title" id="2e3-RY-zFG"/>
+                    <navigationItem key="navigationItem" title="Workout" id="2e3-RY-zFG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mif-e2-8tP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -420,19 +422,40 @@
         <!--Select Exercise-->
         <scene sceneID="ug5-vL-1VC">
             <objects>
-                <tableViewController id="d7v-3q-uB9" sceneMemberID="viewController">
+                <tableViewController id="d7v-3q-uB9" customClass="ExerciseSelectViewController" customModule="flab2ab" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hah-ND-Z1o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="UmU-an-1Xs">
+                            <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6b0-Vx-77g">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExerciseSelect" id="6b0-Vx-77g" customClass="ExerciseSelectCell" customModule="flab2ab" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6b0-Vx-77g" id="ETX-yr-MhB">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4e-6w-uMI">
+                                            <rect key="frame" x="16" y="11.5" width="382" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="g4e-6w-uMI" firstAttribute="centerY" secondItem="ETX-yr-MhB" secondAttribute="centerY" id="Fkb-Sa-nUL"/>
+                                        <constraint firstItem="g4e-6w-uMI" firstAttribute="leading" secondItem="ETX-yr-MhB" secondAttribute="leading" constant="16" id="Q4h-mz-y0Y"/>
+                                        <constraint firstAttribute="trailing" secondItem="g4e-6w-uMI" secondAttribute="trailing" constant="16" id="lpO-0r-3nB"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="exerciseTitleLabel" destination="g4e-6w-uMI" id="Qqb-DU-5Jp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -441,29 +464,27 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select Exercise" id="uoN-jU-bqi">
-                        <barButtonItem key="backBarButtonItem" title=" " id="xwf-nV-csO"/>
+                        <barButtonItem key="backBarButtonItem" title="Workout" id="xwf-nV-csO"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="kOw-AS-BpR" kind="show" id="4tx-QM-csh"/>
+                        <segue destination="kOw-AS-BpR" kind="show" identifier="StartExercise" id="4tx-QM-csh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7Z-wF-hrK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3497" y="360"/>
+            <point key="canvasLocation" x="3495.652173913044" y="359.59821428571428"/>
         </scene>
         <!--Exercise Title-->
         <scene sceneID="0jG-oR-xT2">
             <objects>
-                <viewController id="kOw-AS-BpR" sceneMemberID="viewController">
+                <viewController id="kOw-AS-BpR" customClass="ExerciseViewController" customModule="flab2ab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e7F-vO-zO1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="vTv-kg-M5q"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Exercise Title" id="q7c-Xx-tpC">
-                        <barButtonItem key="backBarButtonItem" title="Workout" id="bFE-B7-5jV"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Exercise Title" id="q7c-Xx-tpC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXx-vQ-HDG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
