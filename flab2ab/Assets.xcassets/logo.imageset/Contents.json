@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "flab ab logo transparent.png",
+      "filename" : "F2A logo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "flab ab logo transparent@2x.png",
+      "filename" : "F2A logo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "flab ab logo transparent@3x.png",
+      "filename" : "F2A logo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

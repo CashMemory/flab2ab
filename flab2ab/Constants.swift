@@ -9,6 +9,10 @@
 struct K {
     static let registerSegue = "RegisterToHome"
     static let loginSegue = "LoginToHome"
+    static let localhost = "http://10.56.52.237:5000/"
+//    static let localhost = "https://run.mocky.io/v3/0f147e61-281b-46ff-832e-c872c8453a4f"
+    static let firestoreUrl = "https://us-central1-flab2ab-9aa39.cloudfunctions.net/app"
+    static let userId = "1lWXVwHmUveyz9vGHEWh"
     
     struct identifiers {
         static let exerciseCell = "ExerciseCell"
@@ -29,8 +33,10 @@ struct K {
     }
     
     static let availableExercises = [
-        "Bicep Curl (Dumbbell)",
-        "Shoulder Press (Dumbbell)"
+        "Bicep Curl",
+        "Shoulder Press",
+        "Squat",
+        "Debug"
     ]
     
 }
